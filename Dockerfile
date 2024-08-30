@@ -43,9 +43,6 @@ RUN curl -fsSL https://apt.releases.hashicorp.com/gpg | apt-key add - \
 # Instala Tenv (assume it's a Python package)
 RUN pip3 install tenv
 
-# Instala AWS CDK
-RUN npm install -g aws-cdk
-
 # Instala Pulumi
 RUN curl -fsSL https://get.pulumi.com | sh
 
