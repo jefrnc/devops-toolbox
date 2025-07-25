@@ -1,0 +1,9 @@
+.git
+.github
+.claude
+README.md
+LICENSE
+CLAUDE.md
+*.log
+*.tmp
+.DS_Store
