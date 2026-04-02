@@ -60,28 +60,28 @@ DevOps Toolbox es una imagen Docker basada en Ubuntu que incluye todas las herra
 
 ### Ejecutar la imagen
 ```bash
-docker run -it --rm jsfrnc/devops-toolbox:latest
+docker run -it --rm jefrnc/devops-toolbox:latest
 ```
 
 ### Con credenciales AWS
 ```bash
 docker run -it --rm \
   -v ~/.aws:/root/.aws:ro \
-  jsfrnc/devops-toolbox:latest
+  jefrnc/devops-toolbox:latest
 ```
 
 ### Con kubeconfig para Kubernetes
 ```bash
 docker run -it --rm \
   -v ~/.kube:/root/.kube:ro \
-  jsfrnc/devops-toolbox:latest
+  jefrnc/devops-toolbox:latest
 ```
 
 ### Con acceso a Docker del host
 ```bash
 docker run -it --rm \
   -v /var/run/docker.sock:/var/run/docker.sock \
-  jsfrnc/devops-toolbox:latest
+  jefrnc/devops-toolbox:latest
 ```
 
 ### Modo completo (todas las credenciales)
@@ -91,7 +91,7 @@ docker run -it --rm \
   -v ~/.kube:/root/.kube:ro \
   -v ~/.gcloud:/root/.config/gcloud:ro \
   -v ~/.azure:/root/.azure:ro \
-  jsfrnc/devops-toolbox:latest
+  jefrnc/devops-toolbox:latest
 ```
 
 ## 🎯 Casos de Uso
@@ -99,7 +99,7 @@ docker run -it --rm \
 ### Debugging en Kubernetes
 ```bash
 # Ejecutar un pod temporal para debugging
-kubectl run debug --image=jsfrnc/devops-toolbox:latest -it --rm
+kubectl run debug --image=jefrnc/devops-toolbox:latest -it --rm
 
 # Dentro del pod, puedes usar todas las herramientas
 nslookup mi-servicio
@@ -135,7 +135,7 @@ nslookup ejemplo.com
 ## 🔨 Construir la imagen localmente
 
 ```bash
-git clone https://github.com/jsfrnc/devops-toolbox
+git clone https://github.com/jefrnc/devops-toolbox
 cd devops-toolbox
 docker build -t devops-toolbox:local .
 ```
